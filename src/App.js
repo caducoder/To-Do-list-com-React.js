@@ -7,23 +7,32 @@ import './App.css';
 
 const App = () => {
   //para mudar a mensagem, precisa ser um state
+  //a task está aqui pq o componente AddTask precisa acessá-la
   const [tasks, setTasks] = useState([
     {
       id: '1',
       title: 'Estudar Programação',
-      completed: false
+      completed: false,
     },
     {
       id: '2',
       title: 'Ler Livros',
-      completed: true
+      completed: true,
     },
-    {
-      id: '3',
-      title: 'Ver Filmes',
-      completed: true
-    }
   ]);
+
+  const handleTaskAddition = (taskTitle) => {
+    const newTasks = [
+      ...tasks, 
+      {
+        title: taskTitle,
+        id: Math.random(10),
+        completed: false,
+      }
+    ];
+
+    setTasks(newTasks);
+  };
 
 
   //classe no react é 'className'
@@ -32,7 +41,7 @@ const App = () => {
   return (
     <>
       <div className="container">
-        <AddTask />
+        <AddTask handleTaskAddition = {handleTaskAddition}/>
         <Tasks tasks={tasks}/>
       </div>
       
