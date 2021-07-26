@@ -45,6 +45,13 @@ const App = () => {
     setTasks(newTasks);
   };
 
+  //adição aqui
+  const handleTaskDelete = (taskId) => {
+    const newTasks = tasks.filter(task => task.id !== taskId);
+
+    setTasks(newTasks);
+  }
+
 
   //classe no react é 'className'
   //só pode retornar apenas um elemento, senão da erro
@@ -53,7 +60,7 @@ const App = () => {
     <>
       <div className="container">
         <AddTask handleTaskAddition = {handleTaskAddition}/>
-        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} />
+        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDelete={handleTaskDelete} />
       </div>
       
     </>

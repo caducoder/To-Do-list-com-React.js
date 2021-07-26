@@ -11,6 +11,12 @@
 }
 
 .task-title{
-
    cursor: pointer;
+}
+
+.task-delete{
+   background-color: #444;
+   color: chartreuse;
+   cursor: pointer;
+   border: none;
 }
