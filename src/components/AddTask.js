@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Button from './Button';
 import './AddTask.css';
 
-const AddTask = ({handleTaskAddition}) => {
+const AddTask = ({ handleTaskAddition }) => {
    const [inputData, setInputData] = useState("");
 
    //handle = lidar, convenção do react colocar handle em funções passadas para onChange
@@ -13,6 +13,7 @@ const AddTask = ({handleTaskAddition}) => {
 
    const handleAddTaskClick = () => {
       handleTaskAddition(inputData);
+      setInputData("");
    };
 
    return ( 
