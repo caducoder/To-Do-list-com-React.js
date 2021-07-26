@@ -14,9 +14,14 @@
    cursor: pointer;
 }
 
-.task-delete{
+.task-delete, .see-task-details{
    background-color: #444;
    color: chartreuse;
    cursor: pointer;
    border: none;
+   font-size: 20px;
+}
+
+.task-delete:hover, .see-task-details:hover{
+   color: hsl(90, 100%, 35%);
 }
