@@ -5,8 +5,14 @@ import Task from './Task';
 const Tasks = ({ tasks, handleTaskClick, handleTaskDelete }) => {
    return (
       <>
+         {/* Mapeando as tasks e lançando um componente para cada uma */}
          {tasks.map((task) => (
-            <Task task={task} handleTaskClick={handleTaskClick} handleTaskDelete={handleTaskDelete} />
+            <Task 
+               key={task.id} //key único para ajudar o React a diferenciar cada task
+               task={task} 
+               handleTaskClick={handleTaskClick} 
+               handleTaskDelete={handleTaskDelete} 
+            />
          ))}
       </>
    )

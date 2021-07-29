@@ -8,7 +8,11 @@ const Task = ({task, handleTaskClick, handleTaskDelete}) => {
    const history = useHistory();
 
    const handleTaskDetailsClick = () => {
-      history.push(`/${task.title}`);
+      history.push(`/${task.title.split("/").join("-")}`);
+      /**passando o nome da task como nome da rota que
+       * ficará na URL. Fiz a substituição de todos os "/"
+       * por "-", pois a URL considera a barra como uma rota.
+       */
    }
 
    return ( 
@@ -25,10 +29,10 @@ const Task = ({task, handleTaskClick, handleTaskDelete}) => {
          
          <div className="buttons-container">
             <button className="see-task-details" onClick={handleTaskDetailsClick}>
-               <CgInfo />
+               <CgInfo /> {/* ícone de detalhes da tarefa */}
             </button>
             <button className="task-delete" onClick={() => handleTaskDelete(task.id)}>
-               <CgClose />
+               <CgClose /> {/* ícone de deletar tarefa */}
             </button>
          </div>
       </div>

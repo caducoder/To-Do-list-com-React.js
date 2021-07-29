@@ -14,6 +14,12 @@
    cursor: pointer;
 }
 
+.buttons-container {
+   width: 30%;
+   display: flex;
+   justify-content: flex-end;
+}
+
 .task-delete, .see-task-details{
    background-color: #444;
    color: chartreuse;
