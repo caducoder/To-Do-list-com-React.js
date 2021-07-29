@@ -2,6 +2,7 @@ import React from 'react';
 
 import Task from './Task';
 
+//Lista de tarefas
 const Tasks = ({ tasks, handleTaskClick, handleTaskDelete }) => {
    return (
       <>

@@ -5,7 +5,7 @@ import Button from './Button';
 import './TaskDetails.css'
 
 const TaskDetails = () => {
-   //useParams(): retorna os parâmetros que está sendo utilizado na URL
+   //useParams(): retorna os parâmetros que estão sendo utilizados na URL
    const params = useParams();
    const history = useHistory();
 

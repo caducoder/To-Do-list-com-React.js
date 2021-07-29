@@ -4,6 +4,7 @@ import {useHistory} from 'react-router-dom';
 
 import './Task.css';
 
+//Componente tarefa
 const Task = ({task, handleTaskClick, handleTaskDelete}) => {
    const history = useHistory();
 

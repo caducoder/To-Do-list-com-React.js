@@ -39,32 +39,40 @@ const App = () => {
 
   //função para lidar com o clique na task, alternando entre true e false (borda esquerda verde)
   const handleTaskClick = (taskId) => {
+    //verificando em qual task o usuário clicou, por meio do id, e mudando o 'completed'
     const newTasks = tasks.map(task => {
       if(task.id === taskId) return {...task, completed: !task.completed}
 
       return task;
     });
 
+    //atualizando lista
     setTasks(newTasks);
   }
 
+  //função que adiciona uma nova tarefa na lista
   const handleTaskAddition = (taskTitle) => {
-    const newTasks = [
-      ...tasks, 
-      {
-        title: taskTitle,
-        id: uuidv4(),
-        completed: false,
-      }
-    ];
+    //verificando se o input não está vazio
+    if(taskTitle !== ""){
+      const newTasks = [
+        ...tasks, 
+        {
+          title: taskTitle,
+          id: uuidv4(),
+          completed: false,
+        }
+      ];
 
-    setTasks(newTasks);
+      //atualizando lista
+      setTasks(newTasks);
+    } 
   };
 
-  //adição aqui
+  //função que deleta tarefa
   const handleTaskDelete = (taskId) => {
     const newTasks = tasks.filter(task => task.id !== taskId);
 
+    //atualizando lista
     setTasks(newTasks);
   }
 
@@ -77,7 +85,7 @@ const App = () => {
       <div className="container">
         <Header />
         <Route 
-          path="/" 
+          path="/" //rota da página inicial
           exact //para a rota ser exatamente igual ao path
           render={() => (
             <>
@@ -90,6 +98,8 @@ const App = () => {
             </>
           )}
         />
+
+        {/* Rota para os detalhes da tarefa */}
         <Route path="/:taskTitle" exact component={TaskDetails} />
       </div>
     </Router>
