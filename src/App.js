@@ -1,10 +1,12 @@
 //Primeira coisa a fazer em todos os componentes React
 import React, { useState } from 'react';
 import {v4 as uuidv4} from 'uuid';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Header from './components/Header';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
+import TaskDetails from './components/TaskDetails';
 import './App.css';
 
 const App = () => {
@@ -58,15 +60,26 @@ const App = () => {
   //só pode retornar apenas um elemento, senão da erro
   //<></> <- esta tag é chamada de fragments e funciona
   return (
-    <>
+    <Router>
       <div className="container">
         <Header />
-        <AddTask handleTaskAddition = {handleTaskAddition}/>
-        <Tasks tasks={tasks} handleTaskClick={handleTaskClick} handleTaskDelete={handleTaskDelete} />
+        <Route 
+          path="/" 
+          exact //para a rota ser exatamente igual ao path
+          render={() => (
+            <>
+              <AddTask handleTaskAddition = {handleTaskAddition}/>
+              <Tasks 
+                tasks={tasks} 
+                handleTaskClick={handleTaskClick} 
+                handleTaskDelete={handleTaskDelete} 
+              />
+            </>
+          )}
+        />
+        <Route path="/:taskTitle" exact component={TaskDetails} />
       </div>
-      
-    </>
-    
+    </Router>
   )
 }
 
