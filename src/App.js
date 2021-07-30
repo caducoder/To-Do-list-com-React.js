@@ -29,7 +29,7 @@ const App = () => {
   //requisitando tarefas de uma API Fake para adicionar tasks na primeira vez que renderizar o componente.
   useEffect(() => {
     const fetchTasks = async () => {
-      const { data } = await axios.get('https://jsonplaceholder.cypress.io/todos?_limit=10');
+      const { data } = await axios.get('https://jsonplaceholder.cypress.io/todos?_limit=4');
 
       setTasks(data);
     };
