@@ -11,6 +11,13 @@ const AddTask = ({ handleTaskAddition }) => {
       setInputData(ev.target.value);
    };
 
+   const handlePressEnter = (ev) => {
+      if(ev.keyCode === 13){
+         handleAddTaskClick();
+      }
+      
+   }
+
    const handleAddTaskClick = () => {
       handleTaskAddition(inputData);
       setInputData("");
@@ -19,7 +26,8 @@ const AddTask = ({ handleTaskAddition }) => {
    return ( 
       <div className="add-task-container">
          <input 
-         onChange={handleInputChange} 
+         onChange={handleInputChange}
+         onKeyUp={handlePressEnter} 
          value={inputData}  
          className="add-task-input"  
          type="text" />
