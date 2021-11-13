@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/To-Do-list-com-ReactJS/static/css/main.8d96d12e.chunk.css",
+    "main.js": "/To-Do-list-com-ReactJS/static/js/main.c3fdb46d.chunk.js",
+    "main.js.map": "/To-Do-list-com-ReactJS/static/js/main.c3fdb46d.chunk.js.map",
+    "runtime-main.js": "/To-Do-list-com-ReactJS/static/js/runtime-main.5c277f7f.js",
+    "runtime-main.js.map": "/To-Do-list-com-ReactJS/static/js/runtime-main.5c277f7f.js.map",
+    "static/js/2.0f87f299.chunk.js": "/To-Do-list-com-ReactJS/static/js/2.0f87f299.chunk.js",
+    "static/js/2.0f87f299.chunk.js.map": "/To-Do-list-com-ReactJS/static/js/2.0f87f299.chunk.js.map",
+    "index.html": "/To-Do-list-com-ReactJS/index.html",
+    "static/css/main.8d96d12e.chunk.css.map": "/To-Do-list-com-ReactJS/static/css/main.8d96d12e.chunk.css.map",
+    "static/js/2.0f87f299.chunk.js.LICENSE.txt": "/To-Do-list-com-ReactJS/static/js/2.0f87f299.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5c277f7f.js",
+    "static/js/2.0f87f299.chunk.js",
+    "static/css/main.8d96d12e.chunk.css",
+    "static/js/main.c3fdb46d.chunk.js"
+  ]
+}
