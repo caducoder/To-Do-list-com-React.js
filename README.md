@@ -6,6 +6,8 @@
 ## Sobre o projeto
 Curso introdutório que fornece uma base ao aprendizado de ReactJS, através do desenvolvimento de uma lista de tarefas com detalhes atribuídos.
 
+[Link do projeto](https://caducoder.github.io/To-Do-list-com-ReactJS/)
+
 ## Aprendizados
 O que eu aprendi durante a construção do projeto:
 - O que são componentes, e como torná-los reutilizáveis;
