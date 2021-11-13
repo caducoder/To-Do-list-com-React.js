@@ -69,7 +69,7 @@ const App = () => {
   //só pode retornar apenas um elemento, senão da erro
   //<></> <- esta tag é chamada de fragments e funciona
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="container">
         <Header />
         <Route 

@@ -13,6 +13,7 @@ const TaskDetails = () => {
    const handleBackButtonClick = () => {
       history.goBack();
    }
+   console.log("parametros: ", params)
 
    return ( 
       <>
